@@ -1,14 +1,14 @@
 // Business logic goes here.....
-var BankAccount =function(balance,deposit,withdrawal){
- this.currentBalance = 0;
+var BankAccount =function(name, initialBalance, deposit, withdrawal){
+ this.currentBalance = initialBalance;
  this.deposit = deposit;
  this.withdrawal = withdrawal;
+ this.newBalance = ;
 }
+
  BankAccount.prototype.deposit = function(balance){
    newBalance = currentBalance + deposit;
    return newBalance;
-
-
  }
  BankAccount.prototype.withdraw = function(balance){
    newBalance = currentBalance - withdrawal;
@@ -19,26 +19,19 @@ var BankAccount =function(balance,deposit,withdrawal){
  }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // User Logic goes here ....
 $(document).ready(function(){
   $("form#BankAccount").submit(function(event){
     event.preventDefault();
 
+  var inputtedName = $("input#name").val();
   var initialBalance = $("input#initialAmount").val();
+  var inputtedDeposit = $("input#deposit").val();
+  var inputtedWithdrawal = $("input#withdraw").val();
+  var myBankAccount = new BankAccount(inputtedName, initialBalance, inputtedDeposit, inputtedWithdrawal);
+
+  myBankAccount.deposit();
+  myBankAccount.withdraw();
+
+
+  $("span.output").last().text("$" + newBalance + ".00");
