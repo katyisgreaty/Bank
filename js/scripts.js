@@ -3,11 +3,12 @@ var BankAccount =function(name, initialBalance, deposit, withdrawal){
  this.currentBalance = initialBalance;
  this.deposit = deposit;
  this.withdrawal = withdrawal;
- this.newBalance = ;
+ this.newBalance;
 }
 
  BankAccount.prototype.deposit = function(balance){
    newBalance = currentBalance + deposit;
+   console.log("This is the place with the first newBalance");
    return newBalance;
  }
  BankAccount.prototype.withdraw = function(balance){
@@ -18,10 +19,9 @@ var BankAccount =function(name, initialBalance, deposit, withdrawal){
   }
  }
 
-
 // User Logic goes here ....
 $(document).ready(function(){
-  $("form#BankAccount").submit(function(event){
+  $("form#setup").submit(function(event){
     event.preventDefault();
 
   var inputtedName = $("input#name").val();
@@ -30,8 +30,10 @@ $(document).ready(function(){
   var inputtedWithdrawal = $("input#withdraw").val();
   var myBankAccount = new BankAccount(inputtedName, initialBalance, inputtedDeposit, inputtedWithdrawal);
 
-  myBankAccount.deposit();
-  myBankAccount.withdraw();
+  myBankAccount.deposit(inputtedDeposit);
+  myBankAccount.withdraw(inputtedWithdrawal);
 
 
   $("span.output").last().text("$" + newBalance + ".00");
+});
+});
