@@ -1,12 +1,12 @@
 # _Bank Account_
 
-#### _Make deposits and withdrawls, {January 24,2017}_
+#### _Make deposits and withdrawls, January 24,2017_
 
-#### By _**Shruti and Katy**_
+#### By **Shruti and Katy**
 
 ## Description
 
-_This project consists of a bank account webpage to which the user can deposit and withdraw money and see the current balance._
+This project consists of a bank account webpage to which the user can deposit and withdraw money and see the current balance.
 
 ## Specs
 
@@ -32,7 +32,7 @@ _This project consists of a bank account webpage to which the user can deposit a
 
 ## Support and contact details
 
-_For any queries and comments contact us at abc@yahoo.com_
+_For any queries and comments contact us at katy.daviscourt@gmail.com_
 
 ## Technologies Used
 
@@ -40,6 +40,6 @@ _This Project uses HTML CSS and the concept of constructor and prototype of Java
 
 ### License
 
-*{This software is licensed under MIT.}*
+*This software is licensed under MIT*
 
-Copyright (c) 2017 **_{Shruti Priya and Katy Daviscourt}_**
+Copyright (c) 2017 **_Shruti Priya and Katy Daviscourt_**
